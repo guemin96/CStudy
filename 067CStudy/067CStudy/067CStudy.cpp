@@ -7,6 +7,8 @@
 //visual Studio 2019에서는 strcpy 함수를 사용하면 오류가 발생한다. 그렇기 때문에 위의 코드를 사용하여 오류를 무시해준다.
 using namespace std;
 
+//깊은 복사 : "실제 값"을 새로운 메모리 공간에 복사하는 것을 의미
+//얕은 복사 : "주소 값"을 복사 -> 참조하고 있는 실제 값은 똑같다.
 class String {
 public:
 	String() {
@@ -62,15 +64,8 @@ int main()
 {
 	String s1("hello");
 	String s2(s1); // 복사 생성자 String(String &rhs)
-	
 
 	cout << "gd" << endl;
 	cout << s1.GetStrData() << endl;
 	cout << s2.GetStrData() << endl;
-	
-
-
 }
-
-
-
